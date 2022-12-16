@@ -20,7 +20,7 @@
       <% @products.each do |product| %>
         <tr>
           <td class="text-center"><%= product.sku %></td>
-          <td class="text-center"><%= availble?(product, "image_urls") ? product.image_urls : "" %></td>
+          <td class="text-center"><%= availble?(product, "image_urls") ? raw(pretify_urls(product.image_urls)) : "" %></td>
           <td class="text-center"><%= availble?(product, "name") ? product.name : "" %></td>
           <td class="text-center"><%= availble?(product, "price") ? product.price : "" %></td>
         </tr>

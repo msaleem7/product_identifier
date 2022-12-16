@@ -9,4 +9,8 @@ module ProductsHelper
   def availble?(product, name)
     product.selected_options.include?(name)
   end
+
+  def pretify_urls(urls)
+    urls.join("<br/>")
+  end
 end
