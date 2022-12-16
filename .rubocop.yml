@@ -1,0 +1,9 @@
+AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'node_modules/**/*'
+    - 'db/schema.rb'
+    - 'db/seeds.rb'
+    - 'test/**/*'
+Metrics/LineLength:
+  Max: 125

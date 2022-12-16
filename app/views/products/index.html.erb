@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div class="page-header form-group">
+    <h3><span class="label label-danger"> Products </span></h3>
+    <div>
+      <a href="<%= new_product_path %>" class="float-right btn btn-primary mb-3"> + Add new product </a>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="text-center">SKU</th>
+        <th class="text-center">Images</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td class="text-center"><%= product.sku %></td>
+          <td class="text-center"><%= availble?(product, "image_urls") ? product.image_urls : "" %></td>
+          <td class="text-center"><%= availble?(product, "name") ? product.name : "" %></td>
+          <td class="text-center"><%= availble?(product, "price") ? product.price : "" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
