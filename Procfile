@@ -1,0 +1,1 @@
+web: ADDR="0.0.0.0:$PORT" bin/heroku-web
